@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  web: &default
+    build: .
+    command: "mix phoenix.server"
+    ports:
+      - "4000:4000"
+    links:
+      - postgres
+    volumes:
+      - .:/usr/src/app
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
