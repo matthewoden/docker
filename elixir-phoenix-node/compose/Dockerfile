@@ -1,6 +1,6 @@
 # Dockerfile for composing a phoenix application
 
-FROM matthewoden/elixir-phoenix-node:v1
+FROM matthewoden/elixir-phoenix-node
 
 RUN \
   apt-get update && \
